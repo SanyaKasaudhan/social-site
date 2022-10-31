@@ -3,9 +3,7 @@
 function App() {
   return (
     <div className="">
-      ho
-      sd
-      sd
+      App
     </div>
   );
 }
