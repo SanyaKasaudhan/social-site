@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {fetchPosts} from '../actions/posts'
+import PostsList from './PostsList';
  class App extends React.Component {
   componentDidMount() { 
     this.props.dispatch(fetchPosts())
@@ -9,10 +10,18 @@ import {fetchPosts} from '../actions/posts'
   render() {
     const {posts}= this.props;
    console.log('props', this.props);
-   return <div>{
+   return <div>
+
+
+
+    {/* {
     posts.map(pro=>
      <div> {pro.title} </div>
-    )}</div>
+    )} */}
+
+    
+    <PostsList posts={posts}/>
+   </div>
   }
 }
 
