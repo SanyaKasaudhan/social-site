@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import {configureStore} from './store'
-
-const store =configureStore();
-console.log('store',store.getState())
-ReactDOM.render(<App />, document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import { configureStore } from "./store";
+import { Provider } from "react-redux";
+const store = configureStore();
+console.log("store", store.getState());
+ReactDOM.render(<Provider store={store}>
+ <App /> </Provider>,
+  document.getElementById("root"));
