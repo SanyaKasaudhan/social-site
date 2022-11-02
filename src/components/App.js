@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {fetchPosts} from '../actions/posts'
+import Navbar from './Navbar';
 import PostsList from './PostsList';
  class App extends React.Component {
   componentDidMount() { 
@@ -19,7 +20,7 @@ import PostsList from './PostsList';
      <div> {pro.title} </div>
     )} */}
 
-    
+    <Navbar />
     <PostsList posts={posts}/>
    </div>
   }
